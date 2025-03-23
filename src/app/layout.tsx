@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '박세은 프론트엔드 포트폴리오',
+  title: '박세은 | 프론트엔드 포트폴리오',
   icons: {
     icon: '/favicon.png',
   },

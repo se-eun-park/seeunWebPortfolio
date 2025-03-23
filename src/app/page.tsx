@@ -1,7 +1,17 @@
-export default function Home() {
+import HomePage from '@/pages/homePage'
+import PortfolioPage from '@/pages/portfolioPage'
+import SkillsPage from '@/pages/skillsPage'
+import ExperiencePage from '@/pages/experiencePage'
+import ContactPage from '@/pages/contactPage'
+
+export default function Page() {
   return (
     <div>
-      <h1 className='text-red-500'>Home</h1>
+      <HomePage />
+      <PortfolioPage />
+      <SkillsPage />
+      <ExperiencePage />
+      <ContactPage />
     </div>
   )
 }
