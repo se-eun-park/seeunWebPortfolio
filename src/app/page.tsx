@@ -1,7 +1,10 @@
-export default function Home() {
+import { Suspense } from 'react'
+import PageContents from '@/components/pageContents'
+
+export default function Page() {
   return (
-    <div>
-      <h1 className='text-red-500'>Home</h1>
-    </div>
+    <Suspense fallback={null}>
+      <PageContents />
+    </Suspense>
   )
 }

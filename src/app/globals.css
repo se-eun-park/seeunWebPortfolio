@@ -1,1 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  --font-paperlogy-800: 'Paperlogy-ExtraBold';
+  --font-thunder-800: 'Thunder-ExtraBold';
+  --font-manrope: 'Manrope';
+  --font-pretendard-300: 'Pretendard-Light';
+  --font-pretendard-400: 'Pretendard-Regular';
+  --font-pretendard-500: 'Pretendard-Medium';
+  --font-pretendard-600: 'Pretendard-SemiBold';
+  --font-pretendard-700: 'Pretendard-Bold';
+
+  --color-black-500: #000000;
+  --color-black-400: #1b1a19;
+  --color-black-300: #2c2b2a;
+  --color-white: #ffffff;
+  --color-gray-500: #999999;
+  --color-gray-400: #c0c0c0;
+  --color-gray-300: #b7bdcc;
+  --color-point-green: #e0f1c2;
+}
+
+@font-face {
+  font-family: 'Paperlogy-ExtraBold';
+  src: url('/assets/fonts/paperlogy/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thunder-ExtraBold';
+  src: url('/assets/fonts/thunder/Thunder-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Light';
+  src: url('/assets/fonts/pretendard/Pretendard-Light.subset.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('/assets/fonts/pretendard/Pretendard-Regular.subset.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Medium';
+  src: url('/assets/fonts/pretendard/Pretendard-Medium.subset.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('/assets/fonts/pretendard/Pretendard-SemiBold.subset.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('/assets/fonts/pretendard/Pretendard-Bold.subset.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
