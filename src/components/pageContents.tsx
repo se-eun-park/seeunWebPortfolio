@@ -33,10 +33,10 @@ export default function PageContents() {
         <ProjectsPage />
       </div>
       <div ref={setIndexedRef(2)}>
-        <SkillsPage />
+        <ExperiencePage />
       </div>
       <div ref={setIndexedRef(3)}>
-        <ExperiencePage />
+        <SkillsPage />
       </div>
       <div ref={setIndexedRef(4)}>
         <ContactPage />
