@@ -10,10 +10,13 @@ import ExperiencePage from '@/pages/experiencePage'
 import ContactPage from '@/pages/contactPage'
 import { pageSectionIndexMap } from '@/constants/pageSectionIndexMap'
 import useIndexedRefs from '@/hooks/useIndexedRefs'
+import { useIsNavClicked } from '@/stores/navClickStateStore'
 
 export default function PageContents() {
   const params = useSearchParams()
   const section = params?.get('section')
+
+  const isNavClicked = useIsNavClicked()
 
   const { indexedRefs, setIndexedRef } = useIndexedRefs(pageSectionIndexMap.length)
 
@@ -22,7 +25,7 @@ export default function PageContents() {
 
     const sectionIndex = pageSectionIndexMap[section]
     indexedRefs.current[sectionIndex]?.scrollIntoView({ behavior: 'smooth' })
-  }, [section, indexedRefs])
+  }, [section, indexedRefs, isNavClicked])
 
   return (
     <>

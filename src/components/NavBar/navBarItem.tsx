@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useIsNavClicked, useSetIsNavClicked } from '@/stores/navClickStateStore'
 
 type NavBarItemProps = {
   children: React.ReactNode
@@ -20,10 +21,14 @@ const hoverTextMap: HoverTextMapProps = {
 }
 
 export default function NavBarItem({ children, path }: NavBarItemProps) {
+  const isNavClicked = useIsNavClicked()
+  const setIsNavClicked = useSetIsNavClicked()
+
   const [isHover, setIsHover] = useState(false)
 
   const handleOnClick = () => {
     window.history.pushState(null, '', `/?section=${path}`)
+    setIsNavClicked(!isNavClicked)
   }
 
   const handleOnMouseEnter = () => {
