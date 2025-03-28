@@ -1,0 +1,5 @@
+export { default as HomeIcon } from './home-icon.svg'
+export { default as FolderIcon } from './folder-icon.svg'
+export { default as BagIcon } from './bag-icon.svg'
+export { default as ToolIcon } from './tool-icon.svg'
+export { default as AtIcon } from './at-icon.svg'
