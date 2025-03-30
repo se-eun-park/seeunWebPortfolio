@@ -2,7 +2,7 @@ import { GithubIcon, InstagramIcon, EmailIcon } from '@/assets/svg'
 
 type SocialButtonIconMapProps = {
   theme: 'light' | 'dark'
-  isHover: boolean
+  isHover: boolean | null
 }
 
 export default function socialButtonIconMap({ theme, isHover }: SocialButtonIconMapProps) {
