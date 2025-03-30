@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import SocialButtonIconMap from '@/constants/socialButtonIconMap'
+import SocialButtonIconMap from '@/utils/socialButtonIconMap'
 
 type SocialButtonGroupProps = {
   name: 'github' | 'instagram' | 'email'
@@ -10,7 +10,7 @@ type SocialButtonGroupProps = {
 }
 
 export default function SocialButtonGroup({ name, theme = 'dark' }: SocialButtonGroupProps) {
-  const [isHover, setIsHover] = useState(false)
+  const [isHover, setIsHover] = useState<boolean | null>(null)
   const socialButtonIconMap = SocialButtonIconMap({ theme, isHover })
 
   const handleOnMouseEnter = () => {
@@ -35,17 +35,20 @@ export default function SocialButtonGroup({ name, theme = 'dark' }: SocialButton
       >
         <button>{socialButtonIconMap[name].component}</button>
       </Link>
-      <div
-        className={`absolute pointer-events-none ${
-          theme === 'dark'
-            ? isHover
-              ? 'animate-fill-up bg-white'
-              : 'animate-empty-out-white-to-black bg-black-500'
-            : isHover
-            ? 'animate-fill-up bg-black-500'
-            : 'animate-empty-out-black-to-white bg-white'
-        } top-0 z-0 w-16 aspect-square`}
-      />
+
+      {isHover !== null && (
+        <div
+          className={`absolute pointer-events-none ${
+            theme === 'dark'
+              ? isHover
+                ? 'animate-fill-up bg-white'
+                : 'animate-empty-out-white-to-black bg-black-500'
+              : isHover
+              ? 'animate-fill-up bg-black-500'
+              : 'animate-empty-out-black-to-white bg-white'
+          } top-0 z-0 w-16 aspect-square`}
+        />
+      )}
     </div>
   )
 }
