@@ -73,6 +73,20 @@
       background-color: var(--color-white);
     }
   }
+
+  --animate-fade-in-up: fade-in-up 0.8s ease-in-out;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @font-face {
